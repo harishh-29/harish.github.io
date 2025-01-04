@@ -1,0 +1,143 @@
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; /* Set a consistent font size for the table */
+    color: #333; /* Set a base color */
+}
+
+table#efficiencyTable td {
+    font-size: 14px;
+}
+
+/* Table Header & Data Cell Styles */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* Table Data Cell Styling */
+td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; /* Ensure text does not wrap */
+}
+
+/* Table Row Styling */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Table Header Styling */
+thead {
+    background-color: #87CEFA; /* Light blue background for the header */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+    /* Add Blue Color to Text in the Header */
+    thead th {
+        color: red; /* Set header text to blue */
+        font-weight: bold; /* Optionally make the text bold */
+        background-color: deepskyblue;
+    }
+
+/* Responsive Table Styling */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* DataTable Specific Table Styling */
+#efficiencyTable {
+    width: 100%;
+    table-layout: auto;
+}
+
+/* DataTable Buttons Styling */
+.dt-button {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .dt-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    .dt-button:active {
+        background-color: #003d75; /* Even darker shade when clicked */
+    }
+
+/* Pagination Button Styling */
+.dataTables_paginate .paginate_button {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 0 5px; /* Add space between pagination buttons */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .dataTables_paginate .paginate_button:hover {
+        background-color: #f1f1f1; /* Light hover effect */
+    }
+
+    .dataTables_paginate .paginate_button.current {
+        background-color: #007bff;
+        color: white;
+    }
+
+        .dataTables_paginate .paginate_button.current:hover {
+            background-color: #0056b3; /* Darker when hovered */
+        }
+
+
+/* Tooltip Styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%; /* Position the tooltip above the text */
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
